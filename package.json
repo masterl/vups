@@ -1,0 +1,25 @@
+{
+  "name": "vups",
+  "version": "0.1.0",
+  "description": "Project structure for SPA development using VueJS, Pug and Stylus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masterl/vups.git"
+  },
+  "keywords": [
+    "vuejs",
+    "pug",
+    "stylus",
+    "spa"
+  ],
+  "author": "Leonardo de Oliveira Lourenço",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/masterl/vups/issues"
+  },
+  "homepage": "https://github.com/masterl/vups#readme",
+}
