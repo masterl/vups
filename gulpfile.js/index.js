@@ -1,5 +1,7 @@
-const { series, parallel } = require('gulp');
+const { series, parallel, watch } = require('gulp');
 const chalk = require('chalk');
+
+const serve_files = require('./serve-files');
 
 const compile = {
   index:        require('./compile-index')
@@ -30,12 +32,23 @@ function default_task (cb) {
   cb();
 }
 
-for (const key in compile) {
-  exports[`compile:${key}`] = compile[key];
+function startdev () {
+  watch('src/index.pug', compile.index);
 }
+
+exports['serve-files'] = serve_files;
 
 exports.default = series(
   parallel(...npm_tasks),
   parallel(...compile_tasks),
   default_task
+);
+
+exports.startdev = series(
+  parallel(...npm_tasks),
+  parallel(...compile_tasks),
+  parallel(
+    serve_files,
+    startdev
+  )
 );
