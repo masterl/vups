@@ -4,7 +4,8 @@ const chalk = require('chalk');
 const serve_files = require('./serve-files');
 
 const compile = {
-  index:        require('./compile-index')
+  index:  require('./compile-index'),
+  stylus: require('./compile-stylus')
 };
 
 const npm = {
@@ -34,6 +35,7 @@ function default_task (cb) {
 
 function startdev () {
   watch('src/index.pug', compile.index);
+  watch('src/stylus/**/*.styl', compile.stylus);
 }
 
 exports['serve-files'] = serve_files;

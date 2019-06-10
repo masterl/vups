@@ -26,6 +26,7 @@
   "homepage": "https://github.com/masterl/vups#readme",
   "devDependencies": {
     "chalk": "^2.4.2",
+    "cssnano": "^4.1.10",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.3",
@@ -34,8 +35,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
+    "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
     "live-server": "^1.2.1",
     "normalize.css": "^8.0.1",
     "pug": "^2.0.3"
